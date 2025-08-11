@@ -1,0 +1,65 @@
+.hello-react-container {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  text-align: center;
+}
+
+.hello-react-title {
+  font-size: 4rem;
+  font-weight: 900;
+  margin: 40px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hello-text {
+  color: #333;
+}
+
+.react-text {
+  color: #61dafb;
+  text-shadow: 0 0 20px rgba(97, 218, 251, 0.5);
+  animation: reactGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes reactGlow {
+  from {
+    text-shadow: 0 0 20px rgba(97, 218, 251, 0.5);
+  }
+  to {
+    text-shadow: 0 0 30px rgba(97, 218, 251, 0.8), 0 0 40px rgba(97, 218, 251, 0.3);
+  }
+}
+
+.exercise-info {
+  margin-top: 40px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 5px solid #667eea;
+}
+
+.exercise-info h3 {
+  color: #667eea;
+  margin-bottom: 15px;
+}
+
+.exercise-info p {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hello-react-title {
+    font-size: 2.5rem;
+    margin: 20px 0;
+  }
+  
+  .hello-react-container {
+    padding: 20px;
+  }
+}

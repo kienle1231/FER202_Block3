@@ -1,0 +1,147 @@
+.companies-exercise-container {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.companies-exercise-container h2 {
+  color: #667eea;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+}
+
+.data-section {
+  margin-bottom: 30px;
+}
+
+.data-section h3 {
+  color: #667eea;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+
+.data-item {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-left: 5px solid #667eea;
+}
+
+.data-item h4 {
+  color: #495057;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.data-item pre {
+  background: #e9ecef;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  border: 1px solid #dee2e6;
+  max-height: 200px;
+}
+
+.results-section {
+  margin-bottom: 30px;
+}
+
+.results-section h3 {
+  color: #667eea;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+
+.result-item {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-left: 5px solid #28a745;
+}
+
+.result-item h4 {
+  color: #495057;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.result-item p {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.result-item ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.result-item li {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.retail-companies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.company-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #e9ecef;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.company-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  border-color: #667eea;
+}
+
+.company-card p {
+  margin: 8px 0;
+  color: #495057;
+  font-size: 1rem;
+}
+
+.company-card strong {
+  color: #667eea;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .companies-exercise-container {
+    padding: 20px;
+  }
+  
+  .companies-exercise-container h2 {
+    font-size: 1.8rem;
+  }
+  
+  .results-section h3,
+  .data-section h3 {
+    font-size: 1.5rem;
+  }
+  
+  .retail-companies {
+    grid-template-columns: 1fr;
+  }
+  
+  .company-card {
+    padding: 15px;
+  }
+}
