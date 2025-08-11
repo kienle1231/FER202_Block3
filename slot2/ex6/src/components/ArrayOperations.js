@@ -33,6 +33,11 @@ const ArrayOperations = () => {
     <div className="section">
       <h2>2. Array Operations</h2>
 
+      <div className="data-display">
+        <h3>Dữ liệu mảng array:</h3>
+        <pre>{JSON.stringify(array, null, 2)}</pre>
+      </div>
+
       <div className="results">
         <h3>Kết quả:</h3>
         

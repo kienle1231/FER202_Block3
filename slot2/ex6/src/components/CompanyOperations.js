@@ -110,6 +110,22 @@ const CompanyOperations = () => {
     <div className="section">
       <h2>3. Company Operations</h2>
 
+      <div className="data-display">
+        <h3>Dữ liệu:</h3>
+        <div className="data-section">
+          <h4>Companies:</h4>
+          <pre>{JSON.stringify(companies, null, 2)}</pre>
+        </div>
+        <div className="data-section">
+          <h4>Ages:</h4>
+          <pre>{JSON.stringify(ages, null, 2)}</pre>
+        </div>
+        <div className="data-section">
+          <h4>Person:</h4>
+          <pre>{JSON.stringify(person, null, 2)}</pre>
+        </div>
+      </div>
+
       <div className="results">
         <h3>Kết quả:</h3>
         

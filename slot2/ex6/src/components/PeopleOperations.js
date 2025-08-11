@@ -32,6 +32,11 @@ const PeopleOperations = () => {
     <div className="section">
       <h2>1. People Operations</h2>
 
+      <div className="data-display">
+        <h3>Dữ liệu mảng people:</h3>
+        <pre>{JSON.stringify(people, null, 2)}</pre>
+      </div>
+
       <div className="results">
         <h3>Kết quả:</h3>
         
