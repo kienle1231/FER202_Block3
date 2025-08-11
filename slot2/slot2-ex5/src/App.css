@@ -1,47 +1,37 @@
 .App {
-  text-align: center;
+  text-align: left;
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #333;
+  background-color: white;
+  padding: 20px;
 }
 
-.main-content {
-  padding: 20px;
-  max-width: 1200px;
+.course-container {
+  max-width: 600px;
   margin: 0 auto;
 }
 
-.home-section {
-  background: white;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
-}
-
-.home-section h1 {
-  color: #667eea;
+.course-title {
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
   margin-bottom: 20px;
-  font-size: 2.5rem;
 }
 
-.home-section p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #666;
+.course-list {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .main-content {
-    padding: 10px;
-  }
-  
-  .home-section {
-    padding: 20px;
-  }
-  
-  .home-section h1 {
-    font-size: 2rem;
-  }
+.course-item {
+  color: black;
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.footer-text {
+  color: black;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-top: 20px;
 }
