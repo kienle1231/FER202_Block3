@@ -1,0 +1,150 @@
+.App {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Phần tìm kiếm */
+.search-section {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 300px;
+  font-size: 14px;
+}
+
+.clear-btn {
+  padding: 10px 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.clear-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* Phần lọc và sắp xếp */
+.filter-section {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.filter-group label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #555;
+}
+
+.select-input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  min-width: 150px;
+}
+
+/* Phần kết quả */
+.results-section {
+  margin-top: 20px;
+}
+
+.results-section h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.no-results {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Bảng */
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.company-table th,
+.company-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.company-table th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+  color: #333;
+}
+
+.company-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.company-table td {
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-section {
+    flex-direction: column;
+  }
+  
+  .search-input {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .filter-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .company-table {
+    font-size: 12px;
+  }
+  
+  .company-table th,
+  .company-table td {
+    padding: 8px 6px;
+  }
+}
