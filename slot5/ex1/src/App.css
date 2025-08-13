@@ -1,0 +1,191 @@
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.navbar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-link.active {
+  color: #198754 !important;
+  border-bottom: 2px solid #fd7e14;
+  padding-bottom: 2px;
+}
+
+/* Hero Section */
+.display-4 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Filter and Search */
+.form-select, .form-control {
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  transition: all 0.3s ease;
+}
+
+.form-select:focus, .form-control:focus {
+  border-color: #198754;
+  box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
+}
+
+/* Recipe Cards */
+.recipe-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-image {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.recipe-stats {
+  font-size: 0.9rem;
+}
+
+.recipe-stats .text-muted {
+  color: #6c757d !important;
+}
+
+/* Modal Styles */
+.modal-header {
+  border-bottom: 2px solid #e9ecef;
+}
+
+.modal-title {
+  color: #198754;
+}
+
+.modal-body img {
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.social-icons a {
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #198754 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2rem;
+  }
+  
+  .lead {
+    font-size: 1rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+}
+
+/* Custom Button Styles */
+.btn-success {
+  background-color: #198754;
+  border-color: #198754;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #157347;
+  border-color: #157347;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(25, 135, 84, 0.3);
+}
+
+.btn-outline-secondary {
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+  transform: translateY(-2px);
+}
+
+/* Badge Styles */
+.badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.5em 0.75em;
+  border-radius: 6px;
+}
+
+/* Card Hover Effects */
+.card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Input Focus */
+.input-group:focus-within .input-group-text {
+  border-color: #198754;
+}
+
+/* Filter Dropdowns */
+.form-select {
+  cursor: pointer;
+}
+
+.form-select:hover {
+  border-color: #198754;
+}
+
+/* Recipe Stats Icons */
+.recipe-stats svg {
+  opacity: 0.7;
+}
+
+/* Modal Content Spacing */
+.modal-body h5 {
+  color: #198754;
+  margin-top: 1.5rem;
+}
+
+.modal-body ul, .modal-body ol {
+  padding-left: 1.5rem;
+}
+
+.modal-body li {
+  margin-bottom: 0.5rem;
+}
