@@ -1,13 +1,15 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Container, Row, Col, Form, InputGroup, Button } from 'react-bootstrap';
-import { FaSearch, FaFilter, FaTimes } from 'react-icons/fa';
+import { FaSearch, FaFilter, FaTimes, FaSort } from 'react-icons/fa';
 
 const FilterSearch = ({
   onSearch,
   onFilterChange,
+  onSortChange,
   searchTerm,
   maxPrepTime,
   maxCookTime,
+  sortBy,
   onClearFilters
 }) => {
   const [searchValue, setSearchValue] = useState(searchTerm);
@@ -45,6 +47,10 @@ const FilterSearch = ({
     onFilterChange(filterType, value);
   };
 
+  const handleSortChange = (e) => {
+    onSortChange(e.target.value);
+  };
+
   const handleClearFilters = () => {
     setSearchValue('');
     onClearFilters();
@@ -73,13 +79,13 @@ const FilterSearch = ({
         <Col>
           <div className="d-flex align-items-center mb-2">
             <FaFilter className="text-success me-2" />
-            <h6 className="mb-0 text-success">Filters</h6>
+            <h6 className="mb-0 text-success">Filters & Sort</h6>
           </div>
         </Col>
       </Row>
 
       <Row className="g-3">
-        <Col md={6} lg={4}>
+        <Col md={6} lg={3}>
           <Form.Select
             value={maxPrepTime}
             onChange={(e) => handleFilterChange('maxPrepTime', e.target.value)}
@@ -94,7 +100,7 @@ const FilterSearch = ({
           </Form.Select>
         </Col>
 
-        <Col md={6} lg={4}>
+        <Col md={6} lg={3}>
           <Form.Select
             value={maxCookTime}
             onChange={(e) => handleFilterChange('maxCookTime', e.target.value)}
@@ -109,19 +115,35 @@ const FilterSearch = ({
           </Form.Select>
         </Col>
 
-        <Col md={6} lg={4}>
+        <Col md={6} lg={3}>
+          <Form.Select
+            value={sortBy}
+            onChange={handleSortChange}
+            className="border-light"
+          >
+            <option value="">Sort by</option>
+            <option value="name-asc">Name A→Z</option>
+            <option value="name-desc">Name Z→A</option>
+            <option value="prep-asc">Prep Time ↑</option>
+            <option value="prep-desc">Prep Time ↓</option>
+            <option value="cook-asc">Cook Time ↑</option>
+            <option value="cook-desc">Cook Time ↓</option>
+          </Form.Select>
+        </Col>
+
+        <Col md={6} lg={3}>
           <Button
             variant="outline-secondary"
             onClick={handleClearFilters}
             className="w-100"
           >
             <FaTimes className="me-2" />
-            Clear Filters
+            Clear All
           </Button>
         </Col>
       </Row>
 
-      {(searchValue || maxPrepTime || maxCookTime) && (
+      {(searchValue || maxPrepTime || maxCookTime || sortBy) && (
         <Row className="mt-3">
           <Col>
             <div className="d-flex flex-wrap gap-2">
@@ -139,6 +161,11 @@ const FilterSearch = ({
               {maxCookTime && (
                 <span className="badge bg-info">
                   Cook ≤ {maxCookTime} mins
+                </span>
+              )}
+              {sortBy && (
+                <span className="badge bg-warning text-dark">
+                  Sort: {sortBy}
                 </span>
               )}
             </div>

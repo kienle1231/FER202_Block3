@@ -11,6 +11,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [maxPrepTime, setMaxPrepTime] = useState('');
   const [maxCookTime, setMaxCookTime] = useState('');
+  const [sortBy, setSortBy] = useState('');
 
   const handleSearch = (term) => {
     setSearchTerm(term);
@@ -29,10 +30,15 @@ function App() {
     }
   };
 
+  const handleSortChange = (value) => {
+    setSortBy(value);
+  };
+
   const handleClearFilters = () => {
     setSearchTerm('');
     setMaxPrepTime('');
     setMaxCookTime('');
+    setSortBy('');
   };
 
   return (
@@ -43,15 +49,18 @@ function App() {
         <FilterSearch
           onSearch={handleSearch}
           onFilterChange={handleFilterChange}
+          onSortChange={handleSortChange}
           searchTerm={searchTerm}
           maxPrepTime={maxPrepTime}
           maxCookTime={maxCookTime}
+          sortBy={sortBy}
           onClearFilters={handleClearFilters}
         />
         <RecipeGrid
           searchTerm={searchTerm}
           maxPrepTime={maxPrepTime}
           maxCookTime={maxCookTime}
+          sortBy={sortBy}
         />
       </main>
       <Footer />
