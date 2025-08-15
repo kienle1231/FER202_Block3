@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Form, Button, Container } from "react-bootstrap";
 
-// Component UserProfile
 const UserProfile2 = ({ name, age, onSubmit }) => {
   const [formData, setFormData] = useState({
     name: name,
@@ -10,7 +9,6 @@ const UserProfile2 = ({ name, age, onSubmit }) => {
   });
   const [errors, setErrors] = useState({});
 
-  // Hàm xử lý thay đổi giá trị input
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -19,11 +17,9 @@ const UserProfile2 = ({ name, age, onSubmit }) => {
     });
   };
 
-  // Kiểm tra lỗi dữ liệu trước khi submit
   const validateForm = () => {
     const newErrors = {};
 
-    // Kiểm tra tuổi phải từ 18 đến 100
     const age = parseInt(formData.age, 10);
     if (!formData.name) {
       newErrors.name = "Tên là bắt buộc";
@@ -40,7 +36,6 @@ const UserProfile2 = ({ name, age, onSubmit }) => {
     return Object.keys(newErrors).length === 0;
   };
 
-  // Hàm submit form
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
@@ -52,7 +47,6 @@ const UserProfile2 = ({ name, age, onSubmit }) => {
     <Container>
       <h3>Thông Tin Người Dùng</h3>
       <Form onSubmit={handleSubmit}>
-        {/* Trường tên */}
         <Form.Group controlId="formName">
           <Form.Label>Tên</Form.Label>
           <Form.Control
@@ -67,7 +61,6 @@ const UserProfile2 = ({ name, age, onSubmit }) => {
           </Form.Control.Feedback>
         </Form.Group>
 
-        {/* Trường tuổi */}
         <Form.Group controlId="formAge">
           <Form.Label>Tuổi</Form.Label>
           <Form.Control
@@ -82,7 +75,6 @@ const UserProfile2 = ({ name, age, onSubmit }) => {
           </Form.Control.Feedback>
         </Form.Group>
 
-        {/* Nút submit */}
         <Button variant="primary" type="submit">
           Gửi
         </Button>
@@ -91,11 +83,10 @@ const UserProfile2 = ({ name, age, onSubmit }) => {
   );
 };
 
-// Xác định PropTypes cho UserProfile
 UserProfile2.propTypes = {
-  name: PropTypes.string.isRequired, // 'name' là chuỗi bắt buộc
-  age: PropTypes.oneOfType([PropTypes.string, PropTypes.number]), // 'age' có thể là chuỗi hoặc số
-  onSubmit: PropTypes.func.isRequired, // Hàm onSubmit để xử lý khi người dùng submit form
+  name: PropTypes.string.isRequired,
+  age: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  onSubmit: PropTypes.func.isRequired,
 };
 
 export default UserProfile2;

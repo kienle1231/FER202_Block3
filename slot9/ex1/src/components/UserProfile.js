@@ -1,9 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-// Component UserProfile
 const UserProfile = ({ name, age }) => {
-  // Kiểm tra nếu `name` không được truyền hoặc rỗng
   if (!name || typeof name !== "string") {
     return (
       <div>
@@ -15,7 +13,6 @@ const UserProfile = ({ name, age }) => {
     );
   }
 
-  // Kiểm tra nếu `age` không được nhập hoặc không phải là một số hợp lệ
   if (!age) {
     return (
       <div>
@@ -43,10 +40,9 @@ const UserProfile = ({ name, age }) => {
   );
 };
 
-// Xác định PropTypes cho UserProfile
 UserProfile.propTypes = {
-  name: PropTypes.string.isRequired, // 'name' phải là một chuỗi và là bắt buộc
-  age: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired, // 'age' có thể là chuỗi hoặc số và là bắt buộc
+  name: PropTypes.string.isRequired,
+  age: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
 
 export default UserProfile;

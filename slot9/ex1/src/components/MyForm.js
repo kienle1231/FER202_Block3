@@ -2,7 +2,6 @@ import React, { useState, useReducer } from "react";
 import { Button, Form, Container, Alert } from "react-bootstrap";
 import PropTypes from "prop-types";
 
-// Reducer để quản lý trạng thái form
 const initialState = {
   name: "",
   email: "",
@@ -21,26 +20,22 @@ const formReducer = (state, action) => {
   }
 };
 
-// Component Form
 const MyForm = ({ title, onSubmit }) => {
   const [state, dispatch] = useReducer(formReducer, initialState);
   const [errors, setErrors] = useState({});
-  const [showAlert, setShowAlert] = useState(false); // Biến để kiểm soát việc hiển thị alert
+  const [showAlert, setShowAlert] = useState(false);
 
-  // Hàm xử lý thay đổi giá trị input
   const handleChange = (e) => {
     const { name, value } = e.target;
     dispatch({ type: "SET_FIELD", field: name, value });
   };
 
-  // Hàm kiểm tra lỗi trước khi submit
   const handleValidation = () => {
     const newErrors = {};
     if (!state.name) newErrors.name = "Tên không được để trống!";
     if (!state.email) newErrors.email = "Email không được để trống!";
     if (!state.password) newErrors.password = "Mật khẩu không được để trống!";
 
-    // Nếu có lỗi, hiển thị alert
     if (Object.keys(newErrors).length > 0) {
       setShowAlert(true);
     } else {
@@ -63,7 +58,6 @@ const MyForm = ({ title, onSubmit }) => {
     <Container>
       <h3>{title}</h3>
 
-      {/* Hiển thị Alert nếu có lỗi */}
       {showAlert && (
         <Alert variant="danger">
           <strong>Lỗi:</strong> Vui lòng điền đầy đủ thông tin.
@@ -121,10 +115,9 @@ const MyForm = ({ title, onSubmit }) => {
   );
 };
 
-// Xác định PropTypes cho MyForm
 MyForm.propTypes = {
-  title: PropTypes.string.isRequired, // Tiêu đề phải là một chuỗi
-  onSubmit: PropTypes.func.isRequired, // Hàm onSubmit phải là một function
+  title: PropTypes.string.isRequired,
+  onSubmit: PropTypes.func.isRequired,
 };
 
 export default MyForm;
