@@ -3,9 +3,8 @@
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 20px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 body {
@@ -15,32 +14,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.submitted-data {
-  margin-top: 30px;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
-  width: 100%;
-}
-
-.submitted-data h3 {
-  color: #333;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.submitted-data pre {
-  background: #f8f9fa;
-  padding: 15px;
-  border-radius: 5px;
-  border: 1px solid #e9ecef;
-  font-size: 14px;
-  color: #495057;
-  overflow-x: auto;
 }
 
 .App-logo {
